@@ -1,0 +1,76 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    overflow: hidden;
+}
+.mountain{
+    position: absolute;
+    background-image: url("./images/mountain.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    /* animation: movingscenes linear 10s infinite; */
+}
+.road{
+    position: absolute;
+    background-image: url("./images/road.jpg");
+    background-repeat: repeat-x;
+    width: 10000vw;
+    height: 30vh;
+    bottom: 1px;
+    animation: movingscenes linear 6s infinite;
+}
+.car{
+    background-image: url("./images/car.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 480px;
+    height: 200px;
+    bottom: 100px;
+    left: 350px;
+    animation: updown linear 3s infinite;
+    /* animation: carmove linear 4s 1; */
+}
+.leftwheel img{
+    position: relative;
+    width: 70px;
+    left: 85px;
+    top: 122px;
+    animation: wheelrotation linear .6s infinite;
+}
+.rightwheel img{
+    position: relative;
+    width: 70px;
+    left: 330px;
+    top: 51px;
+    animation: wheelrotation linear .6s infinite;
+}
+@keyframes wheelrotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes movingscenes {
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+@keyframes updown {
+    0%{
+        transform: translatey(-5px);
+    }
+    50%{
+        transform: translatey(5px);
+    }
+    100%{
+        transform: translatey(-5px);
+    }
+}
+@keyframes carmove {
+    50%{
+        transform: translateX(50px);
+    }
+}
